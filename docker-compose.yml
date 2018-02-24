@@ -1,0 +1,17 @@
+version: "3"
+services:
+  computation:
+    container_name: jupyter_container
+    image: jupyter/scipy-notebook
+    ports:
+      - "7777:8888"
+  database:
+    container_name: postgres_container
+    image: postgres
+    ports:
+      - "5432:5432"
+  visualization:
+    container_name: superset_container
+    image: tylerfowler/superset
+    ports:
+      - "7077:8088"
